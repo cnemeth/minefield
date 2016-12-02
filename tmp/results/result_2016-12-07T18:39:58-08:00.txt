@@ -1,0 +1,44 @@
+{
+  "root_node": "MINE_1_0_3",
+  "content": "#<Minefield::Mine:0x007fb4d7de89e0>",
+  "json_class": "Tree::TreeNode",
+  "child_nodes": [
+    {
+      "name": "MINE_1_1_1",
+      "content": "#<Minefield::Mine:0x007fb4d7de9660>",
+      "json_class": "Tree::TreeNode"
+    },
+    {
+      "name": "MINE_2_2_1",
+      "content": "#<Minefield::Mine:0x007fb4d7de9598>",
+      "json_class": "Tree::TreeNode"
+    },
+    {
+      "name": "MINE_0_1_1",
+      "content": "#<Minefield::Mine:0x007fb4d7de9408>",
+      "json_class": "Tree::TreeNode"
+    },
+    {
+      "name": "MINE_1_2_1",
+      "content": "#<Minefield::Mine:0x007fb4d7de9340>",
+      "json_class": "Tree::TreeNode"
+    },
+    {
+      "name": "MINE_-1_-1_1",
+      "content": "#<Minefield::Mine:0x007fb4d7de9020>",
+      "json_class": "Tree::TreeNode",
+      "children": [
+        {
+          "name": "MINE_-2_-1_1",
+          "content": "#<Minefield::Mine:0x007fb4d7de90e8>",
+          "json_class": "Tree::TreeNode"
+        }
+      ]
+    },
+    {
+      "name": "MINE_0_0_2",
+      "content": "#<Minefield::Mine:0x007fb4d7de8aa8>",
+      "json_class": "Tree::TreeNode"
+    }
+  ]
+}

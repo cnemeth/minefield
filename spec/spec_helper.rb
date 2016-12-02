@@ -1,5 +1,7 @@
-require 'rubygems'
+$LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'lib')
+$LOAD_PATH << File.join(File.dirname(__FILE__))
 
+require 'rubygems'
 require 'minefield'
 require 'rake'
 require 'rspec'
@@ -9,9 +11,12 @@ require 'awesome_print'
 require 'faker'
 require 'simplecov'
 require 'timecop'
+require 'tree'
+require 'logger'
 
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '../lib'))
-$LOAD_PATH.unshift(File.dirname(__FILE__))
+require 'fileutils'
+
+Dir["spec/fixtures/**/*.rb"].each { |f| require File.expand_path(f) }
 
 using_git = File.exist?(File.expand_path('../../.git/', __FILE__))
 require 'bundler/setup' if using_git
@@ -29,6 +34,8 @@ SimpleCov.at_exit do
   end
   SimpleCov.result.format!
 end
+
+LOGGER = Logger.new(STDOUT)
 
 RSpec.configure do |config|
   config.order = :rand
