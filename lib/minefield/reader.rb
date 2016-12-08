@@ -5,7 +5,7 @@ module Minefield
     def initialize; end
 
     def read(file)
-      return [] unless File.exist?(file)
+      return [] unless file && File.exist?(file)
       read_file(file)
     end
 

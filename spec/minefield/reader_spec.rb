@@ -34,16 +34,32 @@ RSpec.describe Minefield::Reader do
 
 
   describe 'failure' do
-    let(:file) { 'blah' }
+    describe 'with missing file' do
+      let(:file) { 'blah' }
 
-    it 'does not raise IO error' do
-      expect{
-        Minefield::Reader.new.read(file)
-      }.to_not raise_error
+      it 'does not raise IO error' do
+        expect{
+          Minefield::Reader.new.read(file)
+        }.to_not raise_error
+      end
+
+      it 'returns an empty array' do
+        expect(Minefield::Reader.new.read(file)).to match_array []
+      end
     end
 
-    it 'returns an empty array' do
-      expect(Minefield::Reader.new.read(file)).to match_array []
+    describe 'with nil' do
+      let(:file) { nil }
+
+      it 'does not raise IO error' do
+        expect{
+          Minefield::Reader.new.read(file)
+        }.to_not raise_error
+      end
+
+      it 'returns an empty array' do
+        expect(Minefield::Reader.new.read(file)).to match_array []
+      end
     end
   end
 end
