@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.date        = "2016-12-01"
   s.summary     = "Field of mines processing in Ruby"
-  s.description = "The program produces an output file showing which mine in the list triggers the most explosions in the fewest number of time intervals, including identifying the mine that triggers the most intense explosions."
+  s.description = "The program produces an output file showing which mine in the list triggers the most explosions in the fewest number of time intervals."
   s.homepage    = "https://github.com/cnemeth/minefield"
 
   s.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
