@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rubytree"#, "0.9.7"
 
   s.add_development_dependency "bundler", "~> 1.13"
-  s.add_development_dependency "rake", "~> 11.3"
+  s.add_development_dependency "rake", "~> 12.0"
   s.add_development_dependency "pry", "~> 0.10"
   s.add_development_dependency "pry-byebug", "~> 3.4"
   s.add_development_dependency "rspec", "3.5"
