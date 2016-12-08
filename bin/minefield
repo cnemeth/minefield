@@ -16,4 +16,6 @@ require 'pry'
 
 LOGGER = Logger.new(STDOUT)
 
-Minefield.process(ARGV[0])
+file = ARGV[0] || 'example_mines.txt'
+
+Minefield.process(file)
