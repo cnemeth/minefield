@@ -1,37 +1,18 @@
-# CrowdFlower Programming Challange
+# Development Notes
 
-As part of our recruiting process we ask candidates to complete a small
-programming assignment. It is technically easy, but is intended to
-provide enough scope to allow you to demonstrate your knowledge of good
-programming practices. Assume that the code you are producing is
-intended for use in our production system.
+The `Minefield` program uses a forked version of the RubyTree gem. Updating the gems in RubyTrre,
+JSON in particular, was neccessary so it could be used in this application.
 
-## Development Notes
+## Running the Program
 
-- There is no time limit to complete this exercise.
-- No user interface is required; the program will be run from the
-console and must be written in Ruby.
-- Assume that all files (input and output) will be found/created in the
-same directory as the program executes
-- As part of the exercise, you may choose to write unit tests
-appropriate for the task.
-- Please submit all components of your work back to me when complete
-(source files, test input/output etc)
-- Have Fun!
-
-## Exercise
-
-There is a field of mines. Each mine is identified by a 2d-coordinate
-and a blast radius. When a mine explodes at time interval t, it explodes
-mines that lay within its blast radius at t + 1.
-
-Given a list of mines consisting of their X & Y coordinates and radius
-(ex 2, 2, 5), write a program that finds which mine in the list triggers
-the most explosions in the fewest number of time intervals. Use the
-Euclidean distance to determine whether a mine lays within the radius of
-another mine. Your program should produce an output file showing the
-results, including identifying the mine that triggers the most intense
-explosions.
+Below is a sample output running the program.
+```
+$ bin/minefield example_mines.txt
+I, [2016-12-07T19:28:10.511151 #20055]  INFO -- : Processing file: example_mines.txt
+I, [2016-12-07T19:28:10.511399 #20055]  INFO -- : Processing data ...
+I, [2016-12-07T19:28:10.512936 #20055]  INFO -- : Writing output file ... ~/workspace/minefield/tmp/results/result_2016-12-07T19:28:10-08:00.txt
+```
+The input file, `example_mines.txt`, is located in the project root directory, and the output file is saved to `tmp/results` as shown.
 
 ## A sample mines input
 
@@ -55,26 +36,6 @@ Content of `example_mines.txt`
     0 0 2
     1 0 3
     1 7 2
-
-Cameron Befus
-VP Engineering
-
-## Development Notes
-
-The `Minefield` program follows the standard for a Ruby gem. The gemspec file contains the dependencies with one exception,
- the RubyTree gem, which is a forked gem and is listed in the Gemfile. The RubyTree gem was forked in order to update its gems,
-JSON in particular, so it could be used in this application.
-
-## Running the Program
-
-Below is a sample output running the program.
-```
-$ bin/minefield example_mines.txt
-I, [2016-12-07T19:28:10.511151 #20055]  INFO -- : Processing file: example_mines.txt
-I, [2016-12-07T19:28:10.511399 #20055]  INFO -- : Processing data ...
-I, [2016-12-07T19:28:10.512936 #20055]  INFO -- : Writing output file ... ~/workspace/minefield/tmp/results/result_2016-12-07T19:28:10-08:00.txt
-```
-The input file, `example_mines.txt`, is located in the project root directory, and the output file is saved to `tmp/results` as shown.
 
 ### Sample output file
 
@@ -137,6 +98,3 @@ or
 $ bin/rspec
 ```
 As of this writing the specs are running green.
-
-Csaba Nemeth
-cnemth9@gmail.com
